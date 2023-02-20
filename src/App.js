@@ -1,23 +1,19 @@
+import * as React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { createBoard } from './utils/createBoard';
 
 function App() {
+  const [board, setBoard] = React.useState(()=>createBoard());
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {board.map((row, rowIdx) => (
+        <div key={rowIdx}> 
+          {row.map((letter, letterIdx) => (
+            <div key={letterIdx}> Cell </div>
+        ))} 
+        </div>
+      ))}
     </div>
   );
 }
