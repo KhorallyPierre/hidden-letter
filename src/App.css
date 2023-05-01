@@ -1,7 +1,25 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  color: snow;
+  font-weight: bolder;
+  box-shadow: 10px 3px 4px black;
 }
 
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0px 3px 4px black;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +32,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: lightpink;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +42,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  display: flex;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +53,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+.hasWonLetter {
+  font-weight: bolder;
+  color:greenyellow;
+  font-size: 20;
+}
+.incorrect {
+  color: red;
+}
+.cell:hover {
+  cursor: pointer;
 }
