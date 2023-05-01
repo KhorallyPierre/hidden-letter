@@ -5,7 +5,11 @@
   text-align: center;
   color: snow;
   font-weight: bolder;
-  box-shadow: 10px 3px 4px black;
+}
+
+.lettersContainer {
+  box-shadow: 0px 3px 40px black; 
+  background-color: lightcoral;
 }
 
 .row {
